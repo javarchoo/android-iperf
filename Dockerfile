@@ -244,10 +244,11 @@ RUN cd /tmp/iperf-3.8.1 && \
 
 # iPerf 3.9
 
-RUN cd /tmp && \
-    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.9.tar.gz && \
-    tar -zxvf iperf-3.9.tar.gz && \
-    rm -f iperf-3.9.tar.gz
+#RUN cd /tmp && \
+#    wget --no-check-certificate -q https://downloads.es.net/pub/iperf/iperf-3.9.tar.gz && \
+#    tar -zxvf iperf-3.9.tar.gz && \
+#    rm -f iperf-3.9.tar.gz
+ADD src_iperf-3.9 /tmp/iperf-3.9
 
 COPY /iperf-3.9/Android.mk /tmp/iperf-3.9
 RUN cd /tmp/iperf-3.9 && \
